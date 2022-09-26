@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/StartFragment">
+
+    <fragment
+        android:id="@+id/StartFragment"
+        android:name="com.ovia.composevsxml.StartFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_StartFragment_to_XmlFragment"
+            app:destination="@id/XmlFragment" />
+
+        <action
+            android:id="@+id/action_StartFragment_to_ComposeFragment"
+            app:destination="@id/ComposeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/XmlFragment"
+        android:name="com.ovia.composevsxml.XmlFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_XmlFragment_to_StartFragment"
+            app:destination="@id/StartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ComposeFragment"
+        android:name="com.ovia.composevsxml.ComposeFragment"
+        android:label="@string/third_fragment_label"
+        tools:layout="@layout/fragment_compose" />
+</navigation>
