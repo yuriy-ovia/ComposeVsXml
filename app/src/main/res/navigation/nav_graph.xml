@@ -33,6 +33,5 @@
     <fragment
         android:id="@+id/ComposeFragment"
         android:name="com.ovia.composevsxml.ComposeFragment"
-        android:label="@string/third_fragment_label"
-        tools:layout="@layout/fragment_compose" />
+        android:label="@string/third_fragment_label" />
 </navigation>

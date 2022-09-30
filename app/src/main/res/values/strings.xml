@@ -4,12 +4,15 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Start Fragment</string>
     <string name="second_fragment_label">XML Fragment</string>
+    <string name="second_fragment_subtitle">Bacon ipsum dolor amet pancetta cupim kevin, tail venison drumstick shoulder tenderloin alcatra. Pancetta short ribs swine, burgdoggen prosciutto turkey ground round landjaeger. Sausage tongue filet mignon doner chuck. </string>
     <string name="third_fragment_label">Compose Fragment</string>
     <string name="xml">XML</string>
     <string name="compose">Compose</string>
 
     <string name="hello_first_fragment">Hello start fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_second_fragment">Hello Compose</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="second_cta">Second CTA</string>
+    <string name="first_cta">First CTA</string>
 </resources>
