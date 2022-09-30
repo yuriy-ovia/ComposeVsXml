@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
-import androidx.compose.material.IconButton
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -32,8 +31,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.PasswordVisualTransformation
-import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import com.ovia.composevsxml.ui.theme.DoubleSpacing
 import com.ovia.composevsxml.ui.theme.LoginApplicationTheme
@@ -70,7 +67,7 @@ fun LoginPage() {
     val emailValue = remember { mutableStateOf("") }
     val passwordValue = remember { mutableStateOf("") }
 
-    val passwordVisibility = remember { mutableStateOf(false) }
+    //val passwordVisibility = remember { mutableStateOf(false) }
     val focusRequester = remember { FocusRequester() }
 
     Box(
@@ -115,29 +112,16 @@ fun LoginPage() {
                         label = { Text(stringResource(R.string.email_address)) },
                         placeholder = { Text(stringResource(R.string.email_address)) },
                         singleLine = true,
-                        modifier = Modifier.fillMaxWidth(0.8f)
+                        modifier = Modifier.fillMaxWidth(0.7f)
                     )
-
                     OutlinedTextField(
                         value = passwordValue.value,
                         onValueChange = { passwordValue.value = it },
-                        trailingIcon = {
-                            IconButton(onClick = {
-                                passwordVisibility.value = !passwordVisibility.value
-                            }) {
-                                Image(
-                                    painter = painterResource(id = R.drawable.password_eye),
-                                    contentDescription = null,
-                                )
-                            }
-                        },
                         label = { Text(stringResource(R.string.password)) },
                         placeholder = { Text(stringResource(R.string.password)) },
                         singleLine = true,
-                        visualTransformation = if (passwordVisibility.value) VisualTransformation.None
-                        else PasswordVisualTransformation(),
                         modifier = Modifier
-                            .fillMaxWidth(0.8f)
+                            .fillMaxWidth(0.7f)
                             .focusRequester(focusRequester = focusRequester)
                     )
 
@@ -145,7 +129,7 @@ fun LoginPage() {
                     Button(
                         onClick = {},
                         modifier = Modifier
-                            .fillMaxWidth(0.8f)
+                            .fillMaxWidth(0.7f)
                             .height(PrimaryButtonHeight)
                     ) {
                         Text(
